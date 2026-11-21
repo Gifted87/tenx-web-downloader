@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TenX Terminal - Download Latest Android APK</title>
+  <meta name="description"
+    content="Download the latest TenX Institutional Trading Terminal with real-time Biquote SignalR WebSocket price feeds and Multi-Agent AI analysis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="aurora-bg"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <img src="assets/tenx_logo.png" alt="TenX Institutional Trading Terminal">
+        </div>
+        <span class="brand-name">TenX</span>
+        <span class="brand-badge">v1.0.0 Release</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#screens" class="nav-link">Screens</a>
+        <a href="#verify" class="nav-link">Integrity</a>
+        <a href="downloads/TenX-v1.0-release.apk" download class="nav-btn">Direct Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>Biquote Live MT5 SignalR Connected</span>
+        </div>
+
+        <h1 class="hero-title">
+          Institutional Market Alerts &amp; <span class="gradient-text">Multi-Agent AI</span>
+        </h1>
+
+        <p class="hero-desc">
+          Zero synthetic fallbacks. Experience pure sub-second broker ticks directly from MetaTrader 5 via Biquote
+          WebSocket, paired with our 4-stage specialist AI reasoning pipeline (SMC + Wyckoff + Critic + Consolidator).
+        </p>
+
+        <!-- CTA Box -->
+        <div class="download-card glass">
+          <div class="cta-row">
+            <a href="downloads/TenX-v1.0-release.apk" download class="btn-primary" id="downloadBtn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
+              </svg>
+              <span>Download TenX APK</span>
+            </a>
+            <button class="btn-secondary" id="copyLinkBtn">
+              <span>Copy Download Link</span>
+            </button>
+          </div>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Package</span>
+              <span class="spec-val">TenX-v1.0</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">File Size</span>
+              <span class="spec-val">57.2 MB</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Target OS</span>
+              <span class="spec-val">Android 8.0+</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Build Type</span>
+              <span class="spec-val" style="color: var(--green-accent)">Release R8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Phone + QR -->
+      <div class="hero-visual">
+        <div class="phone-card">
+          <div class="phone-screen">
+            <img src="assets/chart-preview.png" alt="TenX Candlestick Chart UI with Live MT5 stream">
+          </div>
+        </div>
+
+        <div class="qr-card glass">
+          <div class="qr-box" id="qrContainer">
+            <!-- Canvas QR rendered via JS -->
+            <canvas id="qrCanvas"></canvas>
+          </div>
+          <div class="qr-info">
+            <h4>Scan to Install</h4>
+            <p>Scan with your phone camera to download directly to your mobile device.</p>
+            <span class="qr-url-badge" id="qrUrlLabel">Connecting...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <span class="section-tag">High Fidelity Architecture</span>
+        <h2 class="section-title">Built for Serious Market Operators</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Zero Fake / Mock Math</h3>
+          <p class="feature-desc">No synthetic pips or simulated random walks. When disconnected or during weekend
+            market close, the app clearly displays the grey status state and pauses in greyscale mode.</p>
+        </div>
+
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.92zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.05.47-9 4.74-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.01-4.09l-2.49-1.46C16.2 17.77 14.24 19 12 19z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Biquote SignalR Hub</h3>
+          <p class="feature-desc">Streaming live MT5 broker ticks over low-latency ASP.NET Core SignalR WebSockets with
+            sub-second bid/ask updates, spreads, and market state flags.</p>
+        </div>
+
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 14.5h-2v-2h2zm0-4.5h-2V7h2z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi-Agent AI Pipeline</h3>
+          <p class="feature-desc">Multi-specialist consensus model: SMC Structure Specialist and Wyckoff Phase
+            Specialist debating alongside a Grounding Critic and Consolidator Officer.</p>
+        </div>
+
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Economic Calendar</h3>
+          <p class="feature-desc">High-impact global macroeconomic releases with consensus, forecast, actual numbers,
+            and real-time release sentiment.</p>
+        </div>
+
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Market Movers &amp; Gainers</h3>
+          <p class="feature-desc">Live leaderboards of top gainers, losers, and volume breakouts across Forex majors,
+            cross pairs, and precious metals.</p>
+        </div>
+
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Currency Cross Matrix</h3>
+          <p class="feature-desc">Interactive 8x8 relative strength heatmap giving immediate visual confirmation of
+            currency strength divergence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Screens Showcase -->
+    <section class="gallery-section" id="screens">
+      <div class="section-header">
+        <span class="section-tag">Verified On-Device</span>
+        <h2 class="section-title">Actual Application Screenshots</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item glass">
+          <img src="assets/chart-preview.png" alt="Live Chart and Watchlist">
+          <div class="gallery-caption">
+            <h4>Live Candlestick Terminal</h4>
+            <p>Sub-second MT5 broker rates, spreads, and market state flags.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item glass">
+          <img src="assets/tools-preview.png" alt="Tools Menu">
+          <div class="gallery-caption">
+            <h4>Curated Market Tools Menu</h4>
+            <p>Direct navigation to Calendar, Movers, Matrix, and Financial News.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item glass">
+          <img src="assets/agents-preview.png" alt="Multi-Agent AI Hub">
+          <div class="gallery-caption">
+            <h4>Multi-Agent AI Strategies</h4>
+            <p>SMC + Wyckoff Specialist workflow with Critic verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrity & Verification -->
+    <section class="verify-card glass" id="verify">
+      <div class="hash-info">
+        <span class="spec-label">Cryptographic Integrity (SHA-256)</span>
+        <div class="hash-code" id="shaCode">BBF82EC8E5F8C91E2F18F9BBF96085E9147E0CD904F1CDDDD2A2468C7C10D90A</div>
+      </div>
+      <button class="btn-secondary" id="copyHashBtn">Copy Hash</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>TenX Terminal &copy; 2026. Powered by Biquote Real-Time Market Infrastructure.</p>
+    </div>
+  </footer>
+
+  <!-- Inline QR Code library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

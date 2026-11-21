@@ -1,0 +1,21 @@
+# Downloads and build binaries
+downloads/
+*.apk
+app-release.apk
+
+# Temporary files and logs
+*.tmp
+*.log
+*.bak
+
+# Python cache & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.venv/
+
+# OS metadata
+.DS_Store
+Thumbs.db
